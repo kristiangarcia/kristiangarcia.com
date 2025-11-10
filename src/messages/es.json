@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Desarrollador Fullstack especializado en agentes de IA",
+    "tagline": "Transformando la complejidad en soluciones elegantes a través de la IA y la innovación",
+    "description": "Apasionado por la tecnología, aprendo rápido y creo soluciones eficientes y de calidad.",
+    "cta": "Contactar",
+    "viewWork": "Ver mi trabajo"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Quién soy y qué hago",
+    "intro": "Desarrollador Fullstack especializado en agentes de IA. Apasionado por la tecnología, aprendo rápido y creo soluciones eficientes y de calidad.",
+    "highlights": {
+      "ai": {
+        "title": "IA e Innovación",
+        "description": "Especializado en agentes de IA y sistemas de automatización, transformando desafíos complejos en soluciones elegantes"
+      },
+      "fullstack": {
+        "title": "Desarrollo Fullstack",
+        "description": "Experiencia en tecnologías web modernas, desde React y Next.js hasta sistemas backend y APIs"
+      },
+      "learning": {
+        "title": "Aprendizaje Rápido",
+        "description": "Rápido para adaptarme y dominar nuevas tecnologías, siempre a la vanguardia de la innovación"
+      }
+    },
+    "downloadCV": "Descargar CV",
+    "location": "Granada, España"
+  },
+  "skills": {
+    "title": "Habilidades y Tecnologías",
+    "subtitle": "Mi experiencia técnica",
+    "categories": {
+      "frontend": {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS", "JavaScript"]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": ["Node.js", "Python", "Java", "PHP", "SQL", "REST APIs"]
+      },
+      "tools": {
+        "title": "Herramientas y DevOps",
+        "items": ["Docker", "Podman", "Git", "Linux", "M365", "SharePoint"]
+      },
+      "ai": {
+        "title": "IA y Automatización",
+        "items": ["Agentes de IA", "Langchain/Langgraph", "Automatización", "Sistemas SDR"]
+      }
+    },
+    "languages": {
+      "title": "Idiomas",
+      "spanish": "Español",
+      "english": "Inglés",
+      "norwegian": "Noruego",
+      "native": "Nativo",
+      "proficient": "C1 Competente",
+      "intermediate": "B1 Intermedio"
+    }
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "subtitle": "Mi trayectoria profesional",
+    "jobs": {
+      "clai": {
+        "title": "Desarrollador especializado en Inteligencia Artificial",
+        "company": "CLAI Academy",
+        "period": "Julio 2025 - Septiembre 2025",
+        "location": "París, Francia",
+        "type": "Freelance",
+        "description": [
+          "Desarrollo freelance de Zaly, un SDR impulsado por IA para automatizar y optimizar la prospección de ventas",
+          "Participación en el diseño e implementación del sistema de IA para gestionar la mayor parte del trabajo de un SDR",
+          "Permitir que los equipos de ventas se concentren en las tareas más efectivas mediante la automatización"
+        ]
+      },
+      "civica": {
+        "title": "Desarrollador de software",
+        "company": "Cívica",
+        "period": "Mayo 2024",
+        "location": "Granada, España",
+        "type": "Formación",
+        "description": [
+          "Formación práctica en desarrollo full-stack centrada en el desarrollo de habilidades personales",
+          "Desarrollo de aplicaciones front-end y back-end utilizando Java, HTML, CSS, JavaScript, React y SQL",
+          "Implementación de arquitecturas modulares y basadas en componentes",
+          "Configuración de entornos de desarrollo utilizando Podman"
+        ]
+      },
+      "floorball": {
+        "title": "Desarrollador de aplicaciones web",
+        "company": "Floorball Verband Berlin-Brandenburg e.V.",
+        "period": "Marzo 2024 - Junio 2024",
+        "location": "Berlín, Alemania",
+        "type": "Prácticas Erasmus+",
+        "description": [
+          "Desarrollo de aplicaciones web para la gestión de ligas, pasaportes digitales de árbitros y facturación en línea",
+          "Implementación de estructuras de datos (JSON), scripts en PHP y APIs REST para la integración con M365 y SharePoint",
+          "Mejora de interfaces de usuario con diseños responsivos, elementos interactivos y funcionalidades adicionales",
+          "Optimización de flujos de trabajo mediante formularios intuitivos, cálculos automáticos y gestión de roles y permisos"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "En qué he estado trabajando",
+    "viewProject": "Ver proyecto",
+    "viewGithub": "Ver en GitHub",
+    "items": {
+      "zaly": {
+        "title": "Zaly - SDR Impulsado por IA",
+        "description": "Sistema de Sales Development Representative impulsado por IA para automatizar y optimizar la prospección de ventas. Permite a los equipos de ventas centrarse en las tareas más efectivas mediante automatización inteligente.",
+        "tech": ["Agentes de IA", "Automatización", "Optimización de ventas"],
+        "highlights": ["Prospección automatizada", "Flujos impulsados por IA", "Optimización de ventas"]
+      },
+      "launcher": {
+        "title": "LuminaKraft Launcher",
+        "description": "Launcher moderno y multiplataforma de Minecraft construido con Tauri y React. Incluye autenticación de Microsoft, gestión de modpacks, actualizaciones automáticas y soporte multiidioma. Compilaciones nativas para Windows, macOS y Linux.",
+        "tech": ["Tauri", "Rust", "React", "TypeScript", "Tailwind CSS"],
+        "highlights": ["307 commits", "Multiplataforma", "5 estrellas en GitHub", "Autenticación Microsoft", "Gestión de modpacks"]
+      },
+      "luminakraft": {
+        "title": "LuminaKraft Studios",
+        "description": "Estudio de gaming con más de 1.000 miembros en la comunidad. Creación de contenido atractivo que alcanzó más de 250K visualizaciones en TikTok. Lideré el desarrollo de experiencias de juego personalizadas y gestión de la comunidad.",
+        "tech": ["Gaming", "Gestión de comunidad", "Creación de contenido"],
+        "highlights": ["1.000+ miembros", "250K+ vistas en TikTok", "Fundador y Desarrollador"]
+      }
+    }
+  },
+  "education": {
+    "title": "Educación y Formación",
+    "subtitle": "Mi formación académica",
+    "items": {
+      "university": {
+        "title": "Especialización Universitaria en Inversión Multimercado y Diversificación",
+        "institution": "Universidad de las Hespérides",
+        "period": "Abril 2025 - Actual",
+        "location": "Las Palmas de Gran Canaria, España",
+        "field": "Inversiones y Valores",
+        "credits": "20 ECTS"
+      },
+      "dam": {
+        "title": "Desarrollo de Aplicaciones Multiplataforma",
+        "institution": "IES Hermenegildo Lanz",
+        "period": "Septiembre 2024 - Actual",
+        "location": "Granada, España",
+        "field": "Desarrollo de Software"
+      },
+      "asir": {
+        "title": "Administración de sistemas informáticos en red",
+        "institution": "IES Hermenegildo Lanz",
+        "period": "Septiembre 2022 - Junio 2024",
+        "location": "Granada, España",
+        "field": "Administración de Sistemas Informáticos",
+        "grade": "Mejor Expediente Académico"
+      }
+    },
+    "achievements": {
+      "title": "Logros y Reconocimientos",
+      "items": [
+        "Trofeo al Mejor Expediente Académico (2022-2024)",
+        "Diploma al Mejor Expediente Académico (2023-2024)",
+        "Carta de Recomendación Erasmus+",
+        "Certificación Cisco Networking Academy",
+        "Certificación Python Essentials (PCAP)"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contacta Conmigo",
+    "subtitle": "Trabajemos juntos",
+    "description": "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones.",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+    },
+    "info": {
+      "location": "Granada, España",
+      "email": "info@kristiangarcia.com"
+    },
+    "social": {
+      "title": "Sígueme"
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "madeWith": "Hecho con",
+    "and": "y"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Fullstack developer specialized in AI Agents",
+    "tagline": "Turning complexity into elegant solutions through AI and innovation",
+    "description": "Passionate about technology, I learn quickly and deliver high-quality solutions to real problems.",
+    "cta": "Get in touch",
+    "viewWork": "View my work"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Who I am and what I do",
+    "intro": "Fullstack developer specialized in AI Agents. Passionate about technology, I learn quickly and deliver high-quality solutions to real problems.",
+    "highlights": {
+      "ai": {
+        "title": "AI & Innovation",
+        "description": "Specialized in AI Agents and automation systems, transforming complex challenges into elegant solutions"
+      },
+      "fullstack": {
+        "title": "Fullstack Development",
+        "description": "Experienced in modern web technologies, from React and Next.js to backend systems and APIs"
+      },
+      "learning": {
+        "title": "Fast Learner",
+        "description": "Quick to adapt and master new technologies, always staying at the forefront of innovation"
+      }
+    },
+    "downloadCV": "Download CV",
+    "location": "Granada, Spain"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "My technical expertise",
+    "categories": {
+      "frontend": {
+        "title": "Frontend",
+        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS", "JavaScript"]
+      },
+      "backend": {
+        "title": "Backend",
+        "items": ["Node.js", "Python", "Java", "PHP", "SQL", "REST APIs"]
+      },
+      "tools": {
+        "title": "Tools & DevOps",
+        "items": ["Docker", "Podman", "Git", "Linux", "M365", "SharePoint"]
+      },
+      "ai": {
+        "title": "AI & Automation",
+        "items": ["AI Agents", "Langchain/Langgraph", "Automation", "SDR Systems"]
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "spanish": "Spanish",
+      "english": "English",
+      "norwegian": "Norwegian",
+      "native": "Native",
+      "proficient": "C1 Proficient",
+      "intermediate": "B1 Intermediate"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey",
+    "jobs": {
+      "clai": {
+        "title": "Artificial Intelligence Developer",
+        "company": "CLAI Academy",
+        "period": "July 2025 - September 2025",
+        "location": "Paris, France",
+        "type": "Freelance",
+        "description": [
+          "Freelance development of Zaly, an AI-powered SDR for automating and optimizing sales prospecting",
+          "Participation in designing and implementing the AI system to handle the majority of SDR workload",
+          "Enabling sales teams to focus on the most effective tasks through automation"
+        ]
+      },
+      "civica": {
+        "title": "Software Developer",
+        "company": "Cívica",
+        "period": "May 2024",
+        "location": "Granada, Spain",
+        "type": "Training",
+        "description": [
+          "Practical full-stack development training focused on personal skill-building",
+          "Development of front-end and back-end applications using Java, HTML, CSS, JavaScript, React, and SQL",
+          "Implementation of modular and component-based architectures",
+          "Configuration of development environments using Podman"
+        ]
+      },
+      "floorball": {
+        "title": "Web Application Developer",
+        "company": "Floorball Verband Berlin-Brandenburg e.V.",
+        "period": "March 2024 - June 2024",
+        "location": "Berlin, Germany",
+        "type": "Erasmus+ Internship",
+        "description": [
+          "Developed web applications for league management, digital referee passports, and online billing",
+          "Implemented data structures (JSON), PHP scripts, and REST APIs for integration with M365 and SharePoint",
+          "Enhanced user interfaces with responsive designs, interactive elements, and additional functionalities",
+          "Optimized workflows using intuitive forms, automatic calculations, and role and permission management"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "What I've been working on",
+    "viewProject": "View project",
+    "viewGithub": "View on GitHub",
+    "items": {
+      "zaly": {
+        "title": "Zaly - AI-Powered SDR",
+        "description": "AI-powered Sales Development Representative system for automating and optimizing sales prospecting. Enables sales teams to focus on the most effective tasks through intelligent automation.",
+        "tech": ["AI Agents", "Automation", "Sales Optimization"],
+        "highlights": ["Automated prospecting", "AI-driven workflows", "Sales optimization"]
+      },
+      "launcher": {
+        "title": "LuminaKraft Launcher",
+        "description": "Modern, cross-platform Minecraft launcher built with Tauri and React. Features Microsoft authentication, modpack management, automatic updates, and multi-language support. Native builds for Windows, macOS, and Linux.",
+        "tech": ["Tauri", "Rust", "React", "TypeScript", "Tailwind CSS"],
+        "highlights": ["307 commits", "Cross-platform", "5 stars on GitHub", "Microsoft auth", "Modpack management"]
+      },
+      "luminakraft": {
+        "title": "LuminaKraft Studios",
+        "description": "Gaming studio with over 1,000 community members. Created engaging content reaching 250K+ views on TikTok. Led development of custom gaming experiences and community management.",
+        "tech": ["Gaming", "Community Management", "Content Creation"],
+        "highlights": ["1,000+ members", "250K+ TikTok views", "Founder & Developer"]
+      }
+    }
+  },
+  "education": {
+    "title": "Education & Training",
+    "subtitle": "My academic background",
+    "items": {
+      "university": {
+        "title": "University Specialization in Multi-Market Investment and Diversification",
+        "institution": "Universidad de las Hespérides",
+        "period": "April 2025 - Current",
+        "location": "Las Palmas de Gran Canaria, Spain",
+        "field": "Investments and Securities",
+        "credits": "20 ECTS"
+      },
+      "dam": {
+        "title": "Advanced Cross-Platform Application Development",
+        "institution": "IES Hermenegildo Lanz",
+        "period": "September 2024 - Current",
+        "location": "Granada, Spain",
+        "field": "Software Development"
+      },
+      "asir": {
+        "title": "Microcomputer Systems and Networks",
+        "institution": "IES Hermenegildo Lanz",
+        "period": "September 2022 - June 2024",
+        "location": "Granada, Spain",
+        "field": "IT Systems Administration",
+        "grade": "Best Academic Record"
+      }
+    },
+    "achievements": {
+      "title": "Achievements & Recognition",
+      "items": [
+        "Best Academic Record Trophy (2022-2024)",
+        "Best Academic Record Diploma (2023-2024)",
+        "Erasmus+ Reference Letter",
+        "Cisco Networking Academy Certification",
+        "Python Essentials (PCAP) Certification"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "location": "Granada, Spain",
+      "email": "info@kristiangarcia.com"
+    },
+    "social": {
+      "title": "Follow me"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with",
+    "and": "and"
+  }
+}
