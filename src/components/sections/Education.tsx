@@ -144,7 +144,7 @@ export function Education() {
             </h4>
             <div className="space-y-3">
               <a
-                href="/data/cv/2024_ReferenceLetter_Garcia, Kristian.pdf"
+                href="/data/cv/2024_ReferenceLetter_Kristian.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -153,7 +153,7 @@ export function Education() {
                 Erasmus+ Reference Letter (English)
               </a>
               <a
-                href="/data/cv/2024_ReferenceSchreiben_Garcia, Kristian.pdf"
+                href="/data/cv/2024_ReferenceSchreiben_Kristian.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
