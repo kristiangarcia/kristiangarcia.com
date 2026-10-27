@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    // Meta (WhatsApp Business) domain verification for the KOGP business portfolio.
+    'facebook-domain-verification': 'wmigo0jk5d2rk7s96mcdc36814y7rb',
+  },
 };
 
 export default function RootLayout({
