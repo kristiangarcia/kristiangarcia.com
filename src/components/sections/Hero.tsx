@@ -123,7 +123,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.8 }}
             onClick={() => scrollToSection('#about')}
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2 p-2 rounded-full hover:bg-muted transition-colors group"
-            aria-label="Scroll down"
+            aria-label={t('scrollDown')}
           >
             <ArrowDown className="h-6 w-6 animate-bounce text-muted-foreground group-hover:text-primary transition-colors" />
           </motion.button>

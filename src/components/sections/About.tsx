@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Sparkles, Code, Lightbulb, Download, MapPin } from 'lucide-react';
+import { Sparkles, Code, ShieldCheck, Download, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { SITE_CONFIG } from '@/lib/constants';
 
@@ -16,7 +16,7 @@ const highlights = [
     key: 'fullstack',
   },
   {
-    icon: Lightbulb,
+    icon: ShieldCheck,
     key: 'learning',
   },
 ];
@@ -42,6 +42,9 @@ export function About() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('title')}</h2>
           <p className="text-lg text-muted-foreground">{t('subtitle')}</p>
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mt-6">
+            {t('intro')}
+          </p>
         </motion.div>
 
         {/* Highlight Cards */}
@@ -58,7 +61,7 @@ export function About() {
                 className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors"
               >
                 <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
+                  <Icon className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
                   {t(`highlights.${highlight.key}.title`)}

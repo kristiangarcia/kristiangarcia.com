@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Kristian García Paulsen | AI Engineer & Full-Stack Developer",
+    "description": "AI Engineer and full-stack developer in Granada, Spain. I build LLM agents for real business workflows: multi-agent pipelines, human-in-the-loop email agents, agent governance tooling and a production AI assistant for Unit4 ERP."
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -9,28 +13,29 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Fullstack developer specialized in AI Agents",
-    "tagline": "Turning complexity into elegant solutions through AI and innovation",
-    "description": "Passionate about technology, I learn quickly and deliver high-quality solutions to real problems.",
+    "title": "AI Engineer · Full-Stack Developer · Multi-Agent Systems",
+    "tagline": "I build LLM agents for real business workflows",
+    "description": "Multi-agent pipelines, human-in-the-loop email agents, agent governance tooling and a production AI assistant for Unit4 ERP.",
     "cta": "Get in touch",
-    "viewWork": "View my work"
+    "viewWork": "View my work",
+    "scrollDown": "Scroll down"
   },
   "about": {
     "title": "About Me",
     "subtitle": "Who I am and what I do",
-    "intro": "Fullstack developer specialized in AI Agents. Passionate about technology, I learn quickly and deliver high-quality solutions to real problems.",
+    "intro": "Full-stack developer and AI engineer who builds LLM agents for real business workflows: multi-agent pipelines, human-in-the-loop email agents, agent governance tooling and a production AI assistant for Unit4 ERP.",
     "highlights": {
       "ai": {
-        "title": "AI & Innovation",
-        "description": "Specialized in AI Agents and automation systems, transforming complex challenges into elegant solutions"
+        "title": "LLM Agents & Multi-Agent Systems",
+        "description": "LangGraph agents, multi-agent pipelines with Claude Code and MCP servers that automate real business workflows"
       },
       "fullstack": {
-        "title": "Fullstack Development",
-        "description": "Experienced in modern web technologies, from React and Next.js to backend systems and APIs"
+        "title": "Full-Stack Development",
+        "description": "Next.js, React and TypeScript on the frontend; Python, FastAPI and PostgreSQL on the backend, from first commit to production"
       },
       "learning": {
-        "title": "Fast Learner",
-        "description": "Quick to adapt and master new technologies, always staying at the forefront of innovation"
+        "title": "Production-Ready AI",
+        "description": "Human-in-the-loop approvals, LLM cost control, observability with Langfuse and secured APIs with authentication, rate limiting and caching"
       }
     },
     "downloadCV": "Download CV",
@@ -40,21 +45,63 @@
     "title": "Skills & Technologies",
     "subtitle": "My technical expertise",
     "categories": {
+      "ai": {
+        "title": "AI & LLM",
+        "items": [
+          "LangGraph",
+          "LangChain",
+          "LangSmith",
+          "Langfuse",
+          "MCP",
+          "Multi-agent systems",
+          "RAG",
+          "HITL",
+          "Claude Code"
+        ]
+      },
       "frontend": {
-        "title": "Frontend",
-        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS", "JavaScript"]
+        "title": "Languages & UI",
+        "items": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "SQL",
+          "C#",
+          "PHP",
+          "React",
+          "Next.js",
+          "React Native",
+          "Angular",
+          "Vue"
+        ]
       },
       "backend": {
-        "title": "Backend",
-        "items": ["Node.js", "Python", "Java", "PHP", "SQL", "REST APIs"]
+        "title": "Backend & Data",
+        "items": [
+          "FastAPI",
+          "Spring Boot",
+          "SQLAlchemy",
+          "Prisma",
+          "PostgreSQL",
+          "SQL Server",
+          "MongoDB",
+          "Redis",
+          "RabbitMQ"
+        ]
       },
       "tools": {
-        "title": "Tools & DevOps",
-        "items": ["Docker", "Podman", "Git", "Linux", "M365", "SharePoint"]
-      },
-      "ai": {
-        "title": "AI & Automation",
-        "items": ["AI Agents", "Langchain/Langgraph", "Automation", "SDR Systems"]
+        "title": "Cloud & DevOps",
+        "items": [
+          "Docker",
+          "GCP",
+          "Azure",
+          "AWS",
+          "GitHub Actions",
+          "Jenkins",
+          "Bitbucket Pipelines",
+          "Linux"
+        ]
       }
     },
     "languages": {
@@ -63,50 +110,104 @@
       "english": "English",
       "norwegian": "Norwegian",
       "native": "Native",
-      "proficient": "C1 Proficient",
-      "intermediate": "B1 Intermediate"
+      "proficient": "C1 listening/reading · B2 speaking/writing",
+      "intermediate": "A2–B1"
     }
   },
   "experience": {
     "title": "Work Experience",
     "subtitle": "My professional journey",
     "jobs": {
+      "civicaAi": {
+        "title": "Full-Stack Developer & AI Engineer",
+        "company": "Civica Software",
+        "period": "Feb 2026 – Present",
+        "location": "Granada, Spain",
+        "description": [
+          "Cognitia: internal talent and production-management platform with a public API, an MCP server and a multi-agent AI pipeline (Claude Code) that develops Jira tickets autonomously",
+          "Agent Catalog: governance dashboard for the company's AI agents; built most of the metrics backend (Langfuse tokens, cost and failures per agent), the approval workflow and budgets",
+          "MailPilot: AI email agent with human approval (HITL) before sensitive actions, on a hexagonal architecture; documented the HITL pattern as an internal guide"
+        ],
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "Prisma",
+          "Docker",
+          "MCP",
+          "Claude Code",
+          "FastAPI",
+          "PostgreSQL",
+          "GCP",
+          "Langfuse",
+          "LangGraph"
+        ]
+      },
+      "nexus": {
+        "title": "AI Engineer — Nexus, AI assistant for Unit4 ERP7",
+        "company": "Bright Ambitions Group S.L.",
+        "period": "Aug 2025 – Present",
+        "location": "Granada, Spain",
+        "description": [
+          "Co-built Nexus from first commit to production: designed the original LangGraph ReAct agent and the cross-company copy/compare workflow, with human confirmation before ERP writes",
+          "Built the streaming chat experience (live tool indicators, instant tables) and persistent conversations with a Postgres checkpointer; cut token usage by trimming tool outputs",
+          "Hardened the platform with JWT authentication, per-user rate limiting and Redis-backed caching",
+          "Built LLM cost control (usage metering, per-user and per-org spend caps, admin dashboards); set up daily backups and automated releases"
+        ],
+        "tech": [
+          "Python",
+          "FastAPI",
+          "LangGraph",
+          "React",
+          "PostgreSQL",
+          "Redis"
+        ]
+      },
       "clai": {
-        "title": "Artificial Intelligence Developer",
+        "title": "AI Engineer — Zaly, AI-powered SDR",
         "company": "CLAI Academy",
-        "period": "July 2025 - September 2025",
-        "location": "Paris, France",
+        "period": "Jul 2025 – Sep 2025",
+        "location": "Paris, France (Remote)",
         "type": "Freelance",
         "description": [
-          "Freelance development of Zaly, an AI-powered SDR for automating and optimizing sales prospecting",
-          "Participation in designing and implementing the AI system to handle the majority of SDR workload",
-          "Enabling sales teams to focus on the most effective tasks through automation"
+          "Helped design and implement the AI system that handles most of an SDR's (Sales Development Representative) workload"
+        ],
+        "tech": [
+          "LangGraph",
+          "LangSmith",
+          "FastAPI"
         ]
       },
       "civica": {
         "title": "Software Developer",
-        "company": "Cívica",
-        "period": "May 2024",
+        "company": "Civica Software",
+        "period": "May 2025",
         "location": "Granada, Spain",
-        "type": "Training",
+        "type": "Internship",
         "description": [
-          "Practical full-stack development training focused on personal skill-building",
-          "Development of front-end and back-end applications using Java, HTML, CSS, JavaScript, React, and SQL",
-          "Implementation of modular and component-based architectures",
-          "Configuration of development environments using Podman"
+          "Built full-stack features with component-based architectures"
+        ],
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "React",
+          "SQL"
         ]
       },
       "floorball": {
-        "title": "Web Application Developer",
+        "title": "Web Application Developer & UX/UI Designer",
         "company": "Floorball Verband Berlin-Brandenburg e.V.",
-        "period": "March 2024 - June 2024",
+        "period": "Mar 2024 – Jun 2024",
         "location": "Berlin, Germany",
         "type": "Erasmus+ Internship",
         "description": [
-          "Developed web applications for league management, digital referee passports, and online billing",
-          "Implemented data structures (JSON), PHP scripts, and REST APIs for integration with M365 and SharePoint",
-          "Enhanced user interfaces with responsive designs, interactive elements, and additional functionalities",
-          "Optimized workflows using intuitive forms, automatic calculations, and role and permission management"
+          "Built web apps for league management, referee passports and billing, integrated with Microsoft 365 and SharePoint"
+        ],
+        "tech": [
+          "PHP",
+          "REST APIs",
+          "Microsoft 365",
+          "SharePoint",
+          "UX/UI"
         ]
       }
     }
@@ -116,24 +217,101 @@
     "subtitle": "What I've been working on",
     "viewProject": "View project",
     "viewGithub": "View on GitHub",
+    "website": "Website",
     "items": {
-      "zaly": {
-        "title": "Zaly - AI-Powered SDR",
-        "description": "AI-powered Sales Development Representative system for automating and optimizing sales prospecting. Enables sales teams to focus on the most effective tasks through intelligent automation.",
-        "tech": ["AI Agents", "Automation", "Sales Optimization"],
-        "highlights": ["Automated prospecting", "AI-driven workflows", "Sales optimization"]
+      "nexus": {
+        "title": "Nexus — AI Assistant for Unit4 ERP7",
+        "description": "Production AI assistant for Unit4 ERP7, co-built from first commit to production at Bright Ambitions Group. A LangGraph ReAct agent with a cross-company copy/compare workflow that asks for human confirmation before writing to the ERP.",
+        "tech": [
+          "LangGraph",
+          "Python",
+          "FastAPI",
+          "React",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "highlights": [
+          "Streaming chat with live tool indicators",
+          "Human confirmation before ERP writes",
+          "LLM spend caps and admin dashboards"
+        ]
       },
-      "launcher": {
-        "title": "LuminaKraft Launcher",
-        "description": "Modern, cross-platform Minecraft launcher built with Tauri and React. Features Microsoft authentication, modpack management, automatic updates, and multi-language support. Native builds for Windows, macOS, and Linux.",
-        "tech": ["Tauri", "Rust", "React", "TypeScript", "Tailwind CSS"],
-        "highlights": ["307 commits", "Cross-platform", "5 stars on GitHub", "Microsoft auth", "Modpack management"]
+      "cognitia": {
+        "title": "Cognitia",
+        "description": "Internal talent and production-management platform at Civica Software, with a public API, an MCP server and a multi-agent AI pipeline (Claude Code) that develops Jira tickets autonomously.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "Prisma",
+          "Docker",
+          "MCP",
+          "Claude Code"
+        ],
+        "highlights": [
+          "Multi-agent AI pipeline",
+          "Autonomous Jira ticket development",
+          "Public API and MCP server"
+        ]
+      },
+      "agentCatalog": {
+        "title": "Agent Catalog",
+        "description": "Governance dashboard for the company's AI agents at Civica Software. I built most of the metrics backend, tracking Langfuse tokens, cost and failures per agent, plus the approval workflow and budgets.",
+        "tech": [
+          "FastAPI",
+          "PostgreSQL",
+          "GCP",
+          "Langfuse"
+        ],
+        "highlights": [
+          "Tokens, cost and failures per agent",
+          "Approval workflow",
+          "Budgets per agent"
+        ]
+      },
+      "mailpilot": {
+        "title": "MailPilot",
+        "description": "AI email agent that asks for human approval (HITL) before sensitive actions, built on a hexagonal architecture. I documented the HITL pattern as an internal guide.",
+        "tech": [
+          "LangGraph",
+          "FastAPI",
+          "Next.js"
+        ],
+        "highlights": [
+          "Human-in-the-loop approval",
+          "Hexagonal architecture",
+          "HITL pattern documented as an internal guide"
+        ]
       },
       "luminakraft": {
         "title": "LuminaKraft Studios",
-        "description": "Gaming studio with over 1,000 community members. Created engaging content reaching 250K+ views on TikTok. Led development of custom gaming experiences and community management.",
-        "tech": ["Gaming", "Community Management", "Content Creation"],
-        "highlights": ["1,000+ members", "250K+ TikTok views", "Founder & Developer"]
+        "description": "Minecraft server studio I founded in 2025, with a community of over 1,000 members and content reaching 250K+ views on TikTok.",
+        "tech": [
+          "Gaming",
+          "Community Management",
+          "Content Creation"
+        ],
+        "highlights": [
+          "1,000+ members",
+          "250K+ TikTok views",
+          "Founder"
+        ]
+      },
+      "launcher": {
+        "title": "LuminaKraft Launcher",
+        "description": "Open-source, cross-platform Minecraft launcher built with Tauri and React. Features Microsoft authentication, modpack management, automatic updates and multi-language support, with native builds for Windows, macOS and Linux.",
+        "tech": [
+          "Tauri",
+          "Rust",
+          "React",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
+        "highlights": [
+          "Open source",
+          "Cross-platform",
+          "Microsoft auth",
+          "Modpack management"
+        ]
       }
     }
   },
@@ -141,39 +319,47 @@
     "title": "Education & Training",
     "subtitle": "My academic background",
     "items": {
-      "university": {
-        "title": "University Specialization in Multi-Market Investment and Diversification",
-        "institution": "Universidad de las Hespérides",
-        "period": "April 2025 - Current",
-        "location": "Las Palmas de Gran Canaria, Spain",
-        "field": "Investments and Securities",
-        "credits": "20 ECTS"
-      },
       "dam": {
-        "title": "Advanced Cross-Platform Application Development",
-        "institution": "IES Hermenegildo Lanz",
-        "period": "September 2024 - Current",
+        "title": "Higher VET Diploma (CFGS) in Cross-Platform Application Development",
+        "institution": "IES Politécnico Hermenegildo Lanz",
+        "period": "2024 – 2026",
         "location": "Granada, Spain",
         "field": "Software Development"
       },
+      "university": {
+        "title": "Specialization in Multi-Market Investment & Diversification",
+        "institution": "Universidad de las Hespérides",
+        "period": "2025 – 2026",
+        "location": "Las Palmas de Gran Canaria, Spain",
+        "field": "Investments and Securities · 20 ECTS",
+        "credits": "20 ECTS"
+      },
       "asir": {
-        "title": "Microcomputer Systems and Networks",
-        "institution": "IES Hermenegildo Lanz",
-        "period": "September 2022 - June 2024",
+        "title": "VET Diploma (CFGM) in Microcomputer Systems and Networks",
+        "institution": "IES Politécnico Hermenegildo Lanz",
+        "period": "2022 – 2024",
         "location": "Granada, Spain",
         "field": "IT Systems Administration",
         "grade": "Best Academic Record"
       }
     },
     "achievements": {
-      "title": "Achievements & Recognition",
+      "title": "Projects & Achievements",
       "items": [
-        "Best Academic Record Trophy (2022-2024)",
-        "Best Academic Record Diploma (2023-2024)",
-        "Erasmus+ Reference Letter",
-        "Cisco Networking Academy Certification",
-        "Python Essentials (PCAP) Certification"
+        "LuminaKraft Studios (Founder): Minecraft server studio with 1,000+ members and 250K+ TikTok views (2025 – Present)",
+        "ONE Solution Group: at 16, built an AI solution on the ChatGPT API that the company later adopted (2022)",
+        "Award & Diploma for Best Academic Record (IES Hermenegildo Lanz): top record of the 2022–2024 cycle",
+        "Erasmus+ Letter of Recommendation from the president of Floorball Verband Berlin-Brandenburg, praising technical skills and reliability (2024)",
+        "Cisco Networking Academy: Python Essentials, IT Essentials, Linux Essentials (2023 – 2024)"
       ]
+    },
+    "recognition": {
+      "bestRecord": "Best Academic Record",
+      "trophyAlt": "Best Academic Record trophy",
+      "diplomaAlt": "Best Academic Record diploma",
+      "letters": "Reference Letters",
+      "letterEn": "Erasmus+ Reference Letter (English)",
+      "letterDe": "Erasmus+ Referenzschreiben (Deutsch)"
     }
   },
   "contact": {

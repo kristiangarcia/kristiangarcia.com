@@ -11,10 +11,10 @@ import {
 } from 'lucide-react';
 
 const skillCategories = [
+  { key: 'ai', icon: Brain },
   { key: 'frontend', icon: Code },
   { key: 'backend', icon: Server },
   { key: 'tools', icon: Wrench },
-  { key: 'ai', icon: Brain },
 ];
 
 export function Skills() {

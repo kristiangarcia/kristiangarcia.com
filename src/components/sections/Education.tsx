@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { GraduationCap, Award, MapPin, Calendar, FileText } from 'lucide-react';
 import Image from 'next/image';
 
-const educationItems = ['university', 'dam', 'asir'] as const;
+const educationItems = ['dam', 'university', 'asir'] as const;
 
 export function Education() {
   const t = useTranslations('education');
@@ -115,23 +115,25 @@ export function Education() {
           <div className="bg-card border border-border rounded-lg p-6">
             <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
               <Award className="h-5 w-5 text-primary" />
-              Best Academic Record
+              {t('recognition.bestRecord')}
             </h4>
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-square">
                 <Image
                   src="/imgs/achievements/trofeo_mejor_expediente_nobg.webp"
-                  alt="Best Academic Record Trophy"
+                  alt={t('recognition.trophyAlt')}
                   fill
                   className="object-contain"
+                  sizes="(min-width: 768px) 200px, 40vw"
                 />
               </div>
               <div className="relative aspect-square">
                 <Image
                   src="/imgs/achievements/diploma_mejor_expediente_nobg.webp"
-                  alt="Best Academic Record Diploma"
+                  alt={t('recognition.diplomaAlt')}
                   fill
                   className="object-contain"
+                  sizes="(min-width: 768px) 200px, 40vw"
                 />
               </div>
             </div>
@@ -140,7 +142,7 @@ export function Education() {
           <div className="bg-card border border-border rounded-lg p-6">
             <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
               <FileText className="h-5 w-5 text-primary" />
-              Reference Letters
+              {t('recognition.letters')}
             </h4>
             <div className="space-y-3">
               <a
@@ -150,7 +152,7 @@ export function Education() {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <FileText className="h-4 w-4" />
-                Erasmus+ Reference Letter (English)
+                {t('recognition.letterEn')}
               </a>
               <a
                 href="/data/cv/2024_ReferenceSchreiben_Kristian.pdf"
@@ -159,7 +161,7 @@ export function Education() {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <FileText className="h-4 w-4" />
-                Erasmus+ Referenzschreiben (Deutsch)
+                {t('recognition.letterDe')}
               </a>
             </div>
           </div>

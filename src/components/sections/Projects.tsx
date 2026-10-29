@@ -3,24 +3,29 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Github, CheckCircle2, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
 
 const projects: Array<{
-  key: 'zaly' | 'launcher' | 'luminakraft';
+  key:
+    | 'nexus'
+    | 'cognitia'
+    | 'agentCatalog'
+    | 'mailpilot'
+    | 'luminakraft'
+    | 'launcher';
   githubUrl?: string;
   websiteUrl?: string;
 }> = [
+  { key: 'nexus' },
+  { key: 'cognitia' },
+  { key: 'agentCatalog' },
+  { key: 'mailpilot' },
   {
-    key: 'zaly',
-    githubUrl: 'https://github.com/CLAI-Academy',
+    key: 'luminakraft',
+    websiteUrl: 'https://www.luminakraft.com/',
   },
   {
     key: 'launcher',
     githubUrl: 'https://github.com/LuminaKraft/LuminaKraftLauncher',
-  },
-  {
-    key: 'luminakraft',
-    websiteUrl: 'https://www.luminakraft.com/',
   },
 ];
 
@@ -93,34 +98,32 @@ export function Projects() {
                   </ul>
 
                   {/* Actions */}
-                  <div className="flex gap-2 mt-auto">
-                    {project.githubUrl && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1"
-                        onClick={() =>
-                          window.open(project.githubUrl, '_blank')
-                        }
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        {t('viewGithub')}
-                      </Button>
-                    )}
-                    {project.websiteUrl && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1"
-                        onClick={() =>
-                          window.open(project.websiteUrl, '_blank')
-                        }
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Website
-                      </Button>
-                    )}
-                  </div>
+                  {(project.githubUrl || project.websiteUrl) && (
+                    <div className="flex gap-2 mt-auto">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+                        >
+                          <Github className="h-4 w-4 mr-2" aria-hidden="true" />
+                          {t('viewGithub')}
+                        </a>
+                      )}
+                      {project.websiteUrl && (
+                        <a
+                          href={project.websiteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" aria-hidden="true" />
+                          {t('website')}
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );

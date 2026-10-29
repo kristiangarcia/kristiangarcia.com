@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
 
-const jobs = ['clai', 'civica', 'floorball'] as const;
+const jobs = ['civicaAi', 'nexus', 'clai', 'civica', 'floorball'] as const;
 
 export function Experience() {
   const t = useTranslations('experience');
@@ -29,6 +29,7 @@ export function Experience() {
             const description = t.raw(
               `jobs.${job}.description`
             ) as string[];
+            const tech = t.raw(`jobs.${job}.tech`) as string[];
 
             return (
               <motion.div
@@ -64,9 +65,11 @@ export function Experience() {
                         <MapPin className="h-4 w-4" />
                         {t(`jobs.${job}.location`)}
                       </div>
-                      <span className="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                        {t(`jobs.${job}.type`)}
-                      </span>
+                      {t.has(`jobs.${job}.type`) && (
+                        <span className="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                          {t(`jobs.${job}.type`)}
+                        </span>
+                      )}
                     </div>
 
                     <ul className="space-y-2">
@@ -79,6 +82,19 @@ export function Experience() {
                         </li>
                       ))}
                     </ul>
+
+                    {tech.length > 0 && (
+                      <ul className="flex flex-wrap gap-2 mt-4" aria-label="Tech stack">
+                        {tech.map((item) => (
+                          <li
+                            key={item}
+                            className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </motion.div>

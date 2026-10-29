@@ -1,60 +1,107 @@
 {
+  "meta": {
+    "title": "Kristian García Paulsen | Ingeniero de IA y desarrollador full-stack",
+    "description": "Ingeniero de IA y desarrollador full-stack en Granada. Desarrollo agentes LLM para procesos de negocio reales: pipelines multiagente, agentes de correo con validación humana, herramientas de gobernanza de agentes y un asistente de IA en producción para Unit4 ERP."
+  },
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
     "skills": "Habilidades",
     "experience": "Experiencia",
     "projects": "Proyectos",
-    "education": "Educación",
+    "education": "Formación",
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Desarrollador Fullstack especializado en agentes de IA",
-    "tagline": "Transformando la complejidad en soluciones elegantes a través de la IA y la innovación",
-    "description": "Apasionado por la tecnología, aprendo rápido y creo soluciones eficientes y de calidad.",
+    "title": "Ingeniero de IA · Desarrollador Full-Stack · Sistemas multiagente",
+    "tagline": "Desarrollo agentes LLM para procesos de negocio reales",
+    "description": "Pipelines multiagente, agentes de correo con validación humana, herramientas de gobernanza de agentes y un asistente de IA en producción para Unit4 ERP.",
     "cta": "Contactar",
-    "viewWork": "Ver mi trabajo"
+    "viewWork": "Ver mi trabajo",
+    "scrollDown": "Desplazarse hacia abajo"
   },
   "about": {
-    "title": "Sobre Mí",
+    "title": "Sobre mí",
     "subtitle": "Quién soy y qué hago",
-    "intro": "Desarrollador Fullstack especializado en agentes de IA. Apasionado por la tecnología, aprendo rápido y creo soluciones eficientes y de calidad.",
+    "intro": "Desarrollador full-stack e ingeniero de IA. Desarrollo agentes LLM para procesos de negocio reales: pipelines multiagente, agentes de correo con validación humana (HITL), herramientas de gobernanza de agentes y un asistente de IA en producción para Unit4 ERP.",
     "highlights": {
       "ai": {
-        "title": "IA e Innovación",
-        "description": "Especializado en agentes de IA y sistemas de automatización, transformando desafíos complejos en soluciones elegantes"
+        "title": "Agentes LLM y sistemas multiagente",
+        "description": "Agentes con LangGraph, pipelines multiagente con Claude Code y servidores MCP que automatizan procesos de negocio reales"
       },
       "fullstack": {
-        "title": "Desarrollo Fullstack",
-        "description": "Experiencia en tecnologías web modernas, desde React y Next.js hasta sistemas backend y APIs"
+        "title": "Desarrollo full-stack",
+        "description": "Next.js, React y TypeScript en el frontend; Python, FastAPI y PostgreSQL en el backend, desde el primer commit hasta producción"
       },
       "learning": {
-        "title": "Aprendizaje Rápido",
-        "description": "Rápido para adaptarme y dominar nuevas tecnologías, siempre a la vanguardia de la innovación"
+        "title": "IA lista para producción",
+        "description": "Validación humana (HITL), control de costes de LLM, observabilidad con Langfuse y APIs seguras con autenticación, rate limiting y caché"
       }
     },
     "downloadCV": "Descargar CV",
     "location": "Granada, España"
   },
   "skills": {
-    "title": "Habilidades y Tecnologías",
+    "title": "Habilidades y tecnologías",
     "subtitle": "Mi experiencia técnica",
     "categories": {
+      "ai": {
+        "title": "IA y LLM",
+        "items": [
+          "LangGraph",
+          "LangChain",
+          "LangSmith",
+          "Langfuse",
+          "MCP",
+          "Sistemas multiagente",
+          "RAG",
+          "HITL",
+          "Claude Code"
+        ]
+      },
       "frontend": {
-        "title": "Frontend",
-        "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS", "JavaScript"]
+        "title": "Lenguajes e interfaces",
+        "items": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "SQL",
+          "C#",
+          "PHP",
+          "React",
+          "Next.js",
+          "React Native",
+          "Angular",
+          "Vue"
+        ]
       },
       "backend": {
-        "title": "Backend",
-        "items": ["Node.js", "Python", "Java", "PHP", "SQL", "REST APIs"]
+        "title": "Backend y datos",
+        "items": [
+          "FastAPI",
+          "Spring Boot",
+          "SQLAlchemy",
+          "Prisma",
+          "PostgreSQL",
+          "SQL Server",
+          "MongoDB",
+          "Redis",
+          "RabbitMQ"
+        ]
       },
       "tools": {
-        "title": "Herramientas y DevOps",
-        "items": ["Docker", "Podman", "Git", "Linux", "M365", "SharePoint"]
-      },
-      "ai": {
-        "title": "IA y Automatización",
-        "items": ["Agentes de IA", "Langchain/Langgraph", "Automatización", "Sistemas SDR"]
+        "title": "Cloud y DevOps",
+        "items": [
+          "Docker",
+          "GCP",
+          "Azure",
+          "AWS",
+          "GitHub Actions",
+          "Jenkins",
+          "Bitbucket Pipelines",
+          "Linux"
+        ]
       }
     },
     "languages": {
@@ -63,123 +110,262 @@
       "english": "Inglés",
       "norwegian": "Noruego",
       "native": "Nativo",
-      "proficient": "C1 Competente",
-      "intermediate": "B1 Intermedio"
+      "proficient": "C1 comprensión oral y escrita · B2 expresión oral y escrita",
+      "intermediate": "A2–B1"
     }
   },
   "experience": {
-    "title": "Experiencia Laboral",
+    "title": "Experiencia laboral",
     "subtitle": "Mi trayectoria profesional",
     "jobs": {
+      "civicaAi": {
+        "title": "Desarrollador Full-Stack e ingeniero de IA",
+        "company": "Civica Software",
+        "period": "feb. 2026 – actualidad",
+        "location": "Granada, España",
+        "description": [
+          "Cognitia: plataforma interna de gestión de talento y producción con API pública, servidor MCP y un pipeline de IA multiagente (Claude Code) que desarrolla tickets de Jira de forma autónoma",
+          "Agent Catalog: panel de gobernanza para los agentes de IA de la empresa; desarrollé la mayor parte del backend de métricas (tokens, coste y fallos por agente vía Langfuse), el flujo de aprobaciones y los presupuestos",
+          "MailPilot: agente de correo con IA que requiere aprobación humana (HITL) antes de acciones sensibles, sobre una arquitectura hexagonal; documenté el patrón HITL como guía interna"
+        ],
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "Prisma",
+          "Docker",
+          "MCP",
+          "Claude Code",
+          "FastAPI",
+          "PostgreSQL",
+          "GCP",
+          "Langfuse",
+          "LangGraph"
+        ]
+      },
+      "nexus": {
+        "title": "Ingeniero de IA — Nexus, asistente de IA para Unit4 ERP7",
+        "company": "Bright Ambitions Group S.L.",
+        "period": "ago. 2025 – actualidad",
+        "location": "Granada, España",
+        "description": [
+          "Codesarrollé Nexus desde el primer commit hasta producción: diseñé el agente ReAct original con LangGraph y el flujo de copia y comparación entre empresas, con confirmación humana antes de escribir en el ERP",
+          "Desarrollé el chat en streaming (indicadores de herramientas en vivo, tablas instantáneas) y las conversaciones persistentes con un checkpointer de Postgres; reduje el consumo de tokens recortando las salidas de las herramientas",
+          "Reforcé la plataforma con autenticación JWT, rate limiting por usuario y caché con Redis",
+          "Desarrollé el control de costes de LLM (medición de uso, límites de gasto por usuario y por organización, paneles de administración); configuré copias de seguridad diarias y releases automatizadas"
+        ],
+        "tech": [
+          "Python",
+          "FastAPI",
+          "LangGraph",
+          "React",
+          "PostgreSQL",
+          "Redis"
+        ]
+      },
       "clai": {
-        "title": "Desarrollador especializado en Inteligencia Artificial",
+        "title": "Ingeniero de IA — Zaly, SDR con IA",
         "company": "CLAI Academy",
-        "period": "Julio 2025 - Septiembre 2025",
-        "location": "París, Francia",
+        "period": "jul. 2025 – sept. 2025",
+        "location": "París, Francia (remoto)",
         "type": "Freelance",
         "description": [
-          "Desarrollo freelance de Zaly, un SDR impulsado por IA para automatizar y optimizar la prospección de ventas",
-          "Participación en el diseño e implementación del sistema de IA para gestionar la mayor parte del trabajo de un SDR",
-          "Permitir que los equipos de ventas se concentren en las tareas más efectivas mediante la automatización"
+          "Participé en el diseño e implementación del sistema de IA que asume la mayor parte del trabajo de un SDR (representante de desarrollo de ventas)"
+        ],
+        "tech": [
+          "LangGraph",
+          "LangSmith",
+          "FastAPI"
         ]
       },
       "civica": {
         "title": "Desarrollador de software",
-        "company": "Cívica",
-        "period": "Mayo 2024",
+        "company": "Civica Software",
+        "period": "mayo 2025",
         "location": "Granada, España",
-        "type": "Formación",
+        "type": "Prácticas",
         "description": [
-          "Formación práctica en desarrollo full-stack centrada en el desarrollo de habilidades personales",
-          "Desarrollo de aplicaciones front-end y back-end utilizando Java, HTML, CSS, JavaScript, React y SQL",
-          "Implementación de arquitecturas modulares y basadas en componentes",
-          "Configuración de entornos de desarrollo utilizando Podman"
+          "Desarrollé funcionalidades full-stack con arquitecturas basadas en componentes"
+        ],
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "React",
+          "SQL"
         ]
       },
       "floorball": {
-        "title": "Desarrollador de aplicaciones web",
+        "title": "Desarrollador de aplicaciones web y diseñador UX/UI",
         "company": "Floorball Verband Berlin-Brandenburg e.V.",
-        "period": "Marzo 2024 - Junio 2024",
+        "period": "mar. 2024 – jun. 2024",
         "location": "Berlín, Alemania",
         "type": "Prácticas Erasmus+",
         "description": [
-          "Desarrollo de aplicaciones web para la gestión de ligas, pasaportes digitales de árbitros y facturación en línea",
-          "Implementación de estructuras de datos (JSON), scripts en PHP y APIs REST para la integración con M365 y SharePoint",
-          "Mejora de interfaces de usuario con diseños responsivos, elementos interactivos y funcionalidades adicionales",
-          "Optimización de flujos de trabajo mediante formularios intuitivos, cálculos automáticos y gestión de roles y permisos"
+          "Desarrollé aplicaciones web para la gestión de ligas, pasaportes de árbitros y facturación, integradas con Microsoft 365 y SharePoint"
+        ],
+        "tech": [
+          "PHP",
+          "APIs REST",
+          "Microsoft 365",
+          "SharePoint",
+          "UX/UI"
         ]
       }
     }
   },
   "projects": {
-    "title": "Proyectos Destacados",
+    "title": "Proyectos destacados",
     "subtitle": "En qué he estado trabajando",
     "viewProject": "Ver proyecto",
     "viewGithub": "Ver en GitHub",
+    "website": "Sitio web",
     "items": {
-      "zaly": {
-        "title": "Zaly - SDR Impulsado por IA",
-        "description": "Sistema de Sales Development Representative impulsado por IA para automatizar y optimizar la prospección de ventas. Permite a los equipos de ventas centrarse en las tareas más efectivas mediante automatización inteligente.",
-        "tech": ["Agentes de IA", "Automatización", "Optimización de ventas"],
-        "highlights": ["Prospección automatizada", "Flujos impulsados por IA", "Optimización de ventas"]
+      "nexus": {
+        "title": "Nexus — Asistente de IA para Unit4 ERP7",
+        "description": "Asistente de IA en producción para Unit4 ERP7, codesarrollado desde el primer commit hasta producción en Bright Ambitions Group. Un agente ReAct con LangGraph con un flujo de copia y comparación entre empresas que pide confirmación humana antes de escribir en el ERP.",
+        "tech": [
+          "LangGraph",
+          "Python",
+          "FastAPI",
+          "React",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "highlights": [
+          "Chat en streaming con indicadores de herramientas en vivo",
+          "Confirmación humana antes de escribir en el ERP",
+          "Límites de gasto de LLM y paneles de administración"
+        ]
       },
-      "launcher": {
-        "title": "LuminaKraft Launcher",
-        "description": "Launcher moderno y multiplataforma de Minecraft construido con Tauri y React. Incluye autenticación de Microsoft, gestión de modpacks, actualizaciones automáticas y soporte multiidioma. Compilaciones nativas para Windows, macOS y Linux.",
-        "tech": ["Tauri", "Rust", "React", "TypeScript", "Tailwind CSS"],
-        "highlights": ["307 commits", "Multiplataforma", "5 estrellas en GitHub", "Autenticación Microsoft", "Gestión de modpacks"]
+      "cognitia": {
+        "title": "Cognitia",
+        "description": "Plataforma interna de gestión de talento y producción en Civica Software, con API pública, servidor MCP y un pipeline de IA multiagente (Claude Code) que desarrolla tickets de Jira de forma autónoma.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "Prisma",
+          "Docker",
+          "MCP",
+          "Claude Code"
+        ],
+        "highlights": [
+          "Pipeline de IA multiagente",
+          "Desarrollo autónomo de tickets de Jira",
+          "API pública y servidor MCP"
+        ]
+      },
+      "agentCatalog": {
+        "title": "Agent Catalog",
+        "description": "Panel de gobernanza para los agentes de IA de Civica Software. Desarrollé la mayor parte del backend de métricas, que registra tokens, coste y fallos por agente con Langfuse, además del flujo de aprobaciones y los presupuestos.",
+        "tech": [
+          "FastAPI",
+          "PostgreSQL",
+          "GCP",
+          "Langfuse"
+        ],
+        "highlights": [
+          "Tokens, coste y fallos por agente",
+          "Flujo de aprobaciones",
+          "Presupuestos por agente"
+        ]
+      },
+      "mailpilot": {
+        "title": "MailPilot",
+        "description": "Agente de correo con IA que pide aprobación humana (HITL) antes de acciones sensibles, construido sobre una arquitectura hexagonal. Documenté el patrón HITL como guía interna.",
+        "tech": [
+          "LangGraph",
+          "FastAPI",
+          "Next.js"
+        ],
+        "highlights": [
+          "Aprobación humana (HITL)",
+          "Arquitectura hexagonal",
+          "Patrón HITL documentado como guía interna"
+        ]
       },
       "luminakraft": {
         "title": "LuminaKraft Studios",
-        "description": "Estudio de gaming con más de 1.000 miembros en la comunidad. Creación de contenido atractivo que alcanzó más de 250K visualizaciones en TikTok. Lideré el desarrollo de experiencias de juego personalizadas y gestión de la comunidad.",
-        "tech": ["Gaming", "Gestión de comunidad", "Creación de contenido"],
-        "highlights": ["1.000+ miembros", "250K+ vistas en TikTok", "Fundador y Desarrollador"]
+        "description": "Estudio de servidores de Minecraft que fundé en 2025, con una comunidad de más de 1.000 miembros y contenido que supera las 250.000 visualizaciones en TikTok.",
+        "tech": [
+          "Gaming",
+          "Gestión de comunidad",
+          "Creación de contenido"
+        ],
+        "highlights": [
+          "Más de 1.000 miembros",
+          "Más de 250.000 visualizaciones en TikTok",
+          "Fundador"
+        ]
+      },
+      "launcher": {
+        "title": "LuminaKraft Launcher",
+        "description": "Launcher de Minecraft multiplataforma y de código abierto, desarrollado con Tauri y React. Incluye autenticación de Microsoft, gestión de modpacks, actualizaciones automáticas y soporte multiidioma, con builds nativas para Windows, macOS y Linux.",
+        "tech": [
+          "Tauri",
+          "Rust",
+          "React",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
+        "highlights": [
+          "Código abierto",
+          "Multiplataforma",
+          "Autenticación de Microsoft",
+          "Gestión de modpacks"
+        ]
       }
     }
   },
   "education": {
-    "title": "Educación y Formación",
-    "subtitle": "Mi formación académica",
+    "title": "Formación",
+    "subtitle": "Mi trayectoria académica",
     "items": {
+      "dam": {
+        "title": "CFGS en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+        "institution": "IES Politécnico Hermenegildo Lanz",
+        "period": "2024 – 2026",
+        "location": "Granada, España",
+        "field": "Desarrollo de software"
+      },
       "university": {
-        "title": "Especialización Universitaria en Inversión Multimercado y Diversificación",
+        "title": "Título de Especialista en Inversión Multimercado y Diversificación",
         "institution": "Universidad de las Hespérides",
-        "period": "Abril 2025 - Actual",
+        "period": "2025 – 2026",
         "location": "Las Palmas de Gran Canaria, España",
-        "field": "Inversiones y Valores",
+        "field": "Inversiones y valores · 20 ECTS",
         "credits": "20 ECTS"
       },
-      "dam": {
-        "title": "Desarrollo de Aplicaciones Multiplataforma",
-        "institution": "IES Hermenegildo Lanz",
-        "period": "Septiembre 2024 - Actual",
-        "location": "Granada, España",
-        "field": "Desarrollo de Software"
-      },
       "asir": {
-        "title": "Administración de sistemas informáticos en red",
-        "institution": "IES Hermenegildo Lanz",
-        "period": "Septiembre 2022 - Junio 2024",
+        "title": "CFGM en Sistemas Microinformáticos y Redes (SMR)",
+        "institution": "IES Politécnico Hermenegildo Lanz",
+        "period": "2022 – 2024",
         "location": "Granada, España",
-        "field": "Administración de Sistemas Informáticos",
-        "grade": "Mejor Expediente Académico"
+        "field": "Administración de sistemas informáticos",
+        "grade": "Mejor expediente académico"
       }
     },
     "achievements": {
-      "title": "Logros y Reconocimientos",
+      "title": "Proyectos y logros",
       "items": [
-        "Trofeo al Mejor Expediente Académico (2022-2024)",
-        "Diploma al Mejor Expediente Académico (2023-2024)",
-        "Carta de Recomendación Erasmus+",
-        "Certificación Cisco Networking Academy",
-        "Certificación Python Essentials (PCAP)"
+        "LuminaKraft Studios (fundador): estudio de servidores de Minecraft con más de 1.000 miembros y más de 250.000 visualizaciones en TikTok (2025 – actualidad)",
+        "ONE Solution Group: con 16 años, desarrollé una solución de IA sobre la API de ChatGPT que la empresa adoptó después (2022)",
+        "Premio y diploma al mejor expediente académico (IES Hermenegildo Lanz): mejor expediente de la promoción 2022–2024",
+        "Carta de recomendación Erasmus+ del presidente de la Floorball Verband Berlin-Brandenburg, que destaca mis competencias técnicas y mi fiabilidad (2024)",
+        "Cisco Networking Academy: Python Essentials, IT Essentials y Linux Essentials (2023 – 2024)"
       ]
+    },
+    "recognition": {
+      "bestRecord": "Mejor expediente académico",
+      "trophyAlt": "Trofeo al mejor expediente académico",
+      "diplomaAlt": "Diploma al mejor expediente académico",
+      "letters": "Cartas de recomendación",
+      "letterEn": "Carta de recomendación Erasmus+ (inglés)",
+      "letterDe": "Erasmus+ Referenzschreiben (alemán)"
     }
   },
   "contact": {
-    "title": "Contacta Conmigo",
+    "title": "Contacta conmigo",
     "subtitle": "Trabajemos juntos",
-    "description": "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones.",
+    "description": "Siempre estoy abierto a hablar de nuevos proyectos, ideas u oportunidades en las que pueda aportar.",
     "form": {
       "name": "Nombre",
       "email": "Email",

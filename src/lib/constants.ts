@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
   name: 'Kristian García Paulsen',
-  title: 'Fullstack Developer specialized in AI Agents',
+  title: 'AI Engineer & Full-Stack Developer',
   description:
-    'Passionate about technology, I learn quickly and deliver high-quality solutions to real problems.',
+    'AI Engineer and full-stack developer in Granada, Spain. I build LLM agents for real business workflows: multi-agent pipelines, human-in-the-loop email agents, agent governance tooling and a production AI assistant for Unit4 ERP.',
   url: 'https://kristiangarcia.com',
   email: 'info@kristiangarcia.com',
   location: 'Granada, Spain',
@@ -13,8 +13,8 @@ export const SITE_CONFIG = {
     email: 'mailto:info@kristiangarcia.com',
   },
   cv: {
-    en: '/data/cv/Kristian CV (English) - 14-10-25.pdf',
-    es: '/data/cv/Kristian CV (Español) - 14-10-25.pdf',
+    en: '/data/cv/Kristian CV (English) - 29-10-26.pdf',
+    es: '/data/cv/Kristian CV (Español) - 29-10-26.pdf',
   },
 };
 
