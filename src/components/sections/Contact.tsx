@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/constants';
 import { Reveal } from '@/components/motion/Reveal';
+import { MailtoForm } from '@/components/ui/MailtoForm';
 
 export function Contact() {
   const t = useTranslations('contact');
@@ -76,7 +77,7 @@ export function Contact() {
           </Reveal>
 
           <Reveal className="lg:col-span-5 lg:col-start-8" delay={200}>
-            <form action={SITE_CONFIG.social.email} method="GET" className="space-y-8 [&_*]:[--tw-ring-offset-color:hsl(var(--foreground))]">
+            <MailtoForm email={SITE_CONFIG.email} className="space-y-8">
               <div className="[&_input]:border-background/25 [&_input]:text-background [&_input]:placeholder:text-background/45 [&_input:focus]:border-background">
                 <label htmlFor="subject" className="eyebrow !text-background/60">
                   {t('form.name')}
@@ -97,7 +98,7 @@ export function Contact() {
                 {t('form.send')}
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
               </button>
-            </form>
+            </MailtoForm>
           </Reveal>
         </div>
       </div>
