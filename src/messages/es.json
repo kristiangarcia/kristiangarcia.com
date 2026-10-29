@@ -386,6 +386,23 @@
   "footer": {
     "rights": "Todos los derechos reservados",
     "madeWith": "Hecho con",
-    "and": "y"
+    "and": "y",
+    "privacy": "Privacidad"
+  },
+  "ui": {
+    "menu": "Menú",
+    "close": "Cerrar menú",
+    "toggleTheme": "Cambiar tema",
+    "switchLanguage": "Cambiar idioma",
+    "backToTop": "Volver arriba",
+    "photoAlt": "Retrato en blanco y negro de Kristian García Paulsen con jersey negro de cuello alto y la mano en la barbilla",
+    "cvOther": "CV en inglés",
+    "cvOtherShort": "EN",
+    "cvShort": "ES",
+    "primaryNav": "Principal",
+    "languagesSpoken": "Idiomas",
+    "links": "Enlaces",
+    "skip": "Saltar al contenido",
+    "basedIn": "Ubicación"
   }
 }

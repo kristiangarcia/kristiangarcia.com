@@ -7,7 +7,8 @@ Modern portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and de
 - **Modern Stack**: Next.js 15 App Router, TypeScript, Tailwind CSS
 - **Internationalization**: Full support for English and Spanish (next-intl)
 - **Theme Toggle**: Dark/Light mode with next-themes
-- **Animations**: Smooth animations with Framer Motion
+- **Design**: monochrome editorial identity (Inter Tight + Instrument Serif + JetBrains Mono via `next/font`), one signal accent, B&W portrait hero, dark/light themes
+- **Motion**: CSS-only scroll reveals (IntersectionObserver), marquee and micro-interactions; all disabled under `prefers-reduced-motion`
 - **SEO Optimized**: Meta tags, Open Graph, and semantic HTML
 - **Docker Ready**: Optimized multi-stage Dockerfile for production
 - **Static Generation**: Pre-rendered pages for optimal performance
@@ -109,22 +110,17 @@ The Dockerfile includes:
 - **Styling**: Tailwind CSS
 - **Internationalization**: next-intl
 - **Theme**: next-themes
-- **Animations**: Framer Motion
+- **Animations**: CSS + IntersectionObserver (no animation library)
 - **Icons**: Lucide React
 - **Deployment**: Docker + Dokploy
 
 ## Important Reminders
 
-### Image Optimization
+### Images
 
-Before deploying to production, optimize all images:
-
-1. Visit [Squoosh.app](https://squoosh.app/)
-2. Optimize and convert images in the following folders:
-   - `imgs/yo/*.webp` (profile images)
-   - `imgs/achievements/*.png` and `*.jpg` (achievement images)
-3. Convert to WebP format for better compression
-4. Replace the original files with optimized versions
+- Hero portrait: `public/imgs/portrait/kristian-{480,678}.{avif,webp}` (4:5 crop of the B&W studio portrait), served with `<picture>` + `srcset`.
+- Social preview: `public/imgs/og.jpg` (1200x630).
+- Achievement images live in `public/imgs/achievements/`.
 
 ### Content Updates
 

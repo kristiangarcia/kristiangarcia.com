@@ -1,119 +1,70 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import {
-  Code,
-  Server,
-  Wrench,
-  Brain,
-  Globe,
-} from 'lucide-react';
+import { Reveal } from '@/components/motion/Reveal';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 
-const skillCategories = [
-  { key: 'ai', icon: Brain },
-  { key: 'frontend', icon: Code },
-  { key: 'backend', icon: Server },
-  { key: 'tools', icon: Wrench },
-];
+const categories = ['ai', 'frontend', 'backend', 'tools'] as const;
+const languages = [
+  { name: 'spanish', level: 'native' },
+  { name: 'english', level: 'proficient' },
+  { name: 'norwegian', level: 'intermediate' },
+] as const;
 
 export function Skills() {
   const t = useTranslations('skills');
+  const tn = useTranslations('nav');
 
   return (
-    <section id="skills" className="section">
-      <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('title')}</h2>
-          <p className="text-lg text-muted-foreground">{t('subtitle')}</p>
-        </motion.div>
+    <section id="skills" aria-labelledby="skills-title" className="section bg-card">
+      <div className="container-x">
+        <SectionHeading id="skills-title" index="02" label={tn('skills')} title={t('title')} subtitle={t('subtitle')} />
 
-        {/* Skill Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {skillCategories.map((category, categoryIndex) => {
-            const Icon = category.icon;
-            const items = t.raw(`categories.${category.key}.items`) as string[];
-
+        <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 xl:grid-cols-4">
+          {categories.map((key, ci) => {
+            const items = t.raw(`categories.${key}.items`) as string[];
             return (
-              <motion.div
-                key={category.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
-                className="bg-card border border-border rounded-lg p-6"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold">
-                    {t(`categories.${category.key}.title`)}
-                  </h3>
+              <Reveal key={key} delay={ci * 90} className="flex flex-col bg-card p-6 md:p-7">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-xl font-semibold tracking-[-0.02em]">{t(`categories.${key}.title`)}</h3>
+                  <span className="font-serif text-4xl italic leading-none text-muted-foreground">
+                    {String(items.length).padStart(2, '0')}
+                  </span>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((item, itemIndex) => (
-                    <motion.span
+                <ul className="mt-8 flex flex-wrap gap-2">
+                  {items.map((item) => (
+                    <li
                       key={item}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{
-                        duration: 0.3,
-                        delay: categoryIndex * 0.1 + itemIndex * 0.05,
-                      }}
-                      className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors"
+                      className="cursor-default rounded-full border border-border bg-background px-3 py-1.5 text-sm transition-colors duration-300 hover:border-foreground hover:bg-foreground hover:text-background"
                     >
                       {item}
-                    </motion.span>
+                    </li>
                   ))}
-                </div>
-              </motion.div>
+                </ul>
+              </Reveal>
             );
           })}
         </div>
 
-        {/* Languages */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-card border border-border rounded-lg p-6"
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center">
-              <Globe className="h-5 w-5 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold">{t('languages.title')}</h3>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="text-center p-4 bg-primary/5 rounded-lg">
-              <p className="font-semibold mb-1">{t('languages.spanish')}</p>
-              <p className="text-sm text-muted-foreground">
-                {t('languages.native')}
-              </p>
-            </div>
-            <div className="text-center p-4 bg-primary/5 rounded-lg">
-              <p className="font-semibold mb-1">{t('languages.english')}</p>
-              <p className="text-sm text-muted-foreground">
-                {t('languages.proficient')}
-              </p>
-            </div>
-            <div className="text-center p-4 bg-primary/5 rounded-lg">
-              <p className="font-semibold mb-1">{t('languages.norwegian')}</p>
-              <p className="text-sm text-muted-foreground">
-                {t('languages.intermediate')}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <Reveal className="mt-16">
+          <h3 className="eyebrow mb-6">{t('languages.title')}</h3>
+          <ul className="grid border-t border-border md:grid-cols-3">
+            {languages.map((l, i) => (
+              <li
+                key={l.name}
+                className="flex items-baseline justify-between gap-4 border-b border-border py-6 md:flex-col md:items-start md:gap-3 md:border-b-0 md:pr-8 [&:not(:first-child)]:md:border-l md:[&:not(:first-child)]:pl-8"
+              >
+                <span className="flex items-baseline gap-3">
+                  <span className="font-mono text-xs text-muted-foreground">0{i + 1}</span>
+                  <span className="text-3xl font-semibold tracking-[-0.03em] md:text-4xl">
+                    {t(`languages.${l.name}`)}
+                  </span>
+                </span>
+                <span className="text-right text-sm text-muted-foreground md:text-left">
+                  {t(`languages.${l.level}`)}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,39 +1,30 @@
 'use client';
 
-import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Button } from './Button';
+import { useTranslations } from 'next-intl';
 
+/** Icon swap is CSS-driven (dark: variant), so there is no hydration flash. */
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-
-  // useEffect only runs on the client, so now we can safely show the UI
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <Button variant="ghost" size="icon">
-        <Sun className="h-5 w-5" />
-      </Button>
-    );
-  }
+  const { resolvedTheme, setTheme } = useTheme();
+  const t = useTranslations('ui');
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      aria-label="Toggle theme"
+    <button
+      type="button"
+      className="icon-btn group"
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      aria-label={t('toggleTheme')}
+      title={t('toggleTheme')}
     >
-      {theme === 'dark' ? (
-        <Sun className="h-5 w-5 transition-all" />
-      ) : (
-        <Moon className="h-5 w-5 transition-all" />
-      )}
-    </Button>
+      <Sun
+        className="hidden h-[18px] w-[18px] transition-transform duration-500 group-hover:rotate-90 dark:block"
+        aria-hidden="true"
+      />
+      <Moon
+        className="block h-[18px] w-[18px] transition-transform duration-500 group-hover:-rotate-12 dark:hidden"
+        aria-hidden="true"
+      />
+    </button>
   );
 }

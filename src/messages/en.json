@@ -386,6 +386,23 @@
   "footer": {
     "rights": "All rights reserved",
     "madeWith": "Made with",
-    "and": "and"
+    "and": "and",
+    "privacy": "Privacy"
+  },
+  "ui": {
+    "menu": "Menu",
+    "close": "Close menu",
+    "toggleTheme": "Toggle theme",
+    "switchLanguage": "Switch language",
+    "backToTop": "Back to top",
+    "photoAlt": "Black and white portrait of Kristian García Paulsen in a black turtleneck, hand at his chin",
+    "cvOther": "CV in Spanish",
+    "cvOtherShort": "ES",
+    "cvShort": "EN",
+    "primaryNav": "Primary",
+    "languagesSpoken": "Spoken languages",
+    "links": "Links",
+    "skip": "Skip to content",
+    "basedIn": "Based in"
   }
 }

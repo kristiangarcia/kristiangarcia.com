@@ -1,171 +1,121 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { GraduationCap, Award, MapPin, Calendar, FileText } from 'lucide-react';
 import Image from 'next/image';
+import { Award, FileText, ArrowUpRight } from 'lucide-react';
+import { Reveal } from '@/components/motion/Reveal';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 
 const educationItems = ['dam', 'university', 'asir'] as const;
 
 export function Education() {
   const t = useTranslations('education');
+  const tn = useTranslations('nav');
+  const achievements = t.raw('achievements.items') as string[];
+
+  const letters = [
+    { href: '/data/cv/2024_ReferenceLetter_Kristian.pdf', label: t('recognition.letterEn') },
+    { href: '/data/cv/2024_ReferenceSchreiben_Kristian.pdf', label: t('recognition.letterDe') },
+  ];
 
   return (
-    <section id="education" className="section bg-muted/30">
-      <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('title')}</h2>
-          <p className="text-lg text-muted-foreground">{t('subtitle')}</p>
-        </motion.div>
+    <section id="education" aria-labelledby="education-title" className="section">
+      <div className="container-x">
+        <SectionHeading id="education-title" index="05" label={tn('education')} title={t('title')} subtitle={t('subtitle')} />
 
-        {/* Education Items */}
-        <div className="max-w-4xl mx-auto space-y-6 mb-16">
-          {educationItems.map((item, index) => (
-            <motion.div
+        <ol className="border-b border-border">
+          {educationItems.map((item) => (
+            <Reveal
+              as="li"
               key={item}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors"
+              className="grid gap-4 border-t border-border py-8 md:grid-cols-12 md:gap-10 md:py-10"
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-4">
-                <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="h-6 w-6 text-primary" />
-                </div>
-
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-1">
-                    {t(`items.${item}.title`)}
-                  </h3>
-                  <p className="text-lg text-primary font-medium mb-2">
-                    {t(`items.${item}.institution`)}
-                  </p>
-
-                  <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-2">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {t(`items.${item}.period`)}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
-                      {t(`items.${item}.location`)}
-                    </div>
-                  </div>
-
-                  <p className="text-muted-foreground">
-                    {t(`items.${item}.field`)}
-                  </p>
-
-                  {item === 'asir' && (
-                    <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                      <Award className="h-4 w-4" />
-                      {t(`items.${item}.grade`)}
-                    </div>
-                  )}
-                </div>
+              <p className="font-mono text-sm uppercase tracking-[0.06em] md:col-span-3">
+                {t(`items.${item}.period`)}
+              </p>
+              <div className="md:col-span-6">
+                <h3 className="text-balance text-xl font-semibold leading-snug tracking-[-0.02em] md:text-2xl">
+                  {t(`items.${item}.title`)}
+                </h3>
+                <p className="mt-2 font-serif text-xl italic text-muted-foreground">
+                  {t(`items.${item}.institution`)}
+                </p>
+                {item === 'asir' && (
+                  <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-3 py-1 text-xs font-medium text-background">
+                    <Award className="h-3.5 w-3.5" aria-hidden="true" />
+                    {t(`items.${item}.grade`)}
+                  </span>
+                )}
               </div>
-            </motion.div>
+              <div className="text-sm text-muted-foreground md:col-span-3 md:text-right">
+                <p>{t(`items.${item}.field`)}</p>
+                <p className="mt-1">{t(`items.${item}.location`)}</p>
+              </div>
+            </Reveal>
           ))}
+        </ol>
+
+        <div className="mt-20 grid gap-12 lg:grid-cols-12">
+          <Reveal className="lg:col-span-7">
+            <h3 className="eyebrow mb-6">{t('achievements.title')}</h3>
+            <ol className="space-y-0">
+              {achievements.map((a, i) => (
+                <li
+                  key={i}
+                  className="grid grid-cols-[2.5rem_1fr] border-t border-border py-4 text-pretty leading-relaxed last:border-b"
+                >
+                  <span className="font-mono text-xs leading-7 text-muted-foreground">{String(i + 1).padStart(2, '0')}</span>
+                  <span>{a}</span>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+
+          <div className="space-y-4 lg:col-span-5">
+            <Reveal delay={100} className="rounded-lg border border-border bg-card p-6">
+              <h4 className="flex items-center gap-2 text-sm font-semibold">
+                <Award className="h-4 w-4" aria-hidden="true" />
+                {t('recognition.bestRecord')}
+              </h4>
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                {[
+                  { src: '/imgs/achievements/trofeo_mejor_expediente_nobg.webp', alt: t('recognition.trophyAlt') },
+                  { src: '/imgs/achievements/diploma_mejor_expediente_nobg.webp', alt: t('recognition.diplomaAlt') },
+                ].map((img) => (
+                  <div key={img.src} className="relative aspect-square overflow-hidden rounded bg-background">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width: 1024px) 220px, 45vw"
+                      className="object-contain p-3 grayscale transition duration-700 hover:scale-105 hover:grayscale-0"
+                    />
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={160} className="rounded-lg border border-border bg-card p-6">
+              <h4 className="flex items-center gap-2 text-sm font-semibold">
+                <FileText className="h-4 w-4" aria-hidden="true" />
+                {t('recognition.letters')}
+              </h4>
+              <ul className="mt-3">
+                {letters.map((l) => (
+                  <li key={l.href}>
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between gap-4 border-b border-border py-3 text-sm text-muted-foreground transition-colors last:border-0 hover:text-foreground"
+                    >
+                      {l.label}
+                      <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
         </div>
-
-        {/* Achievements */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-card border border-border rounded-lg p-6 max-w-4xl mx-auto"
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center">
-              <Award className="h-5 w-5 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold">
-              {t('achievements.title')}
-            </h3>
-          </div>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {(t.raw('achievements.items') as string[]).map((achievement, i) => (
-              <li
-                key={i}
-                className="flex gap-2 items-start"
-              >
-                <Award className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">{achievement}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Recognition Images */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto"
-        >
-          <div className="bg-card border border-border rounded-lg p-6">
-            <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Award className="h-5 w-5 text-primary" />
-              {t('recognition.bestRecord')}
-            </h4>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative aspect-square">
-                <Image
-                  src="/imgs/achievements/trofeo_mejor_expediente_nobg.webp"
-                  alt={t('recognition.trophyAlt')}
-                  fill
-                  className="object-contain"
-                  sizes="(min-width: 768px) 200px, 40vw"
-                />
-              </div>
-              <div className="relative aspect-square">
-                <Image
-                  src="/imgs/achievements/diploma_mejor_expediente_nobg.webp"
-                  alt={t('recognition.diplomaAlt')}
-                  fill
-                  className="object-contain"
-                  sizes="(min-width: 768px) 200px, 40vw"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-card border border-border rounded-lg p-6">
-            <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <FileText className="h-5 w-5 text-primary" />
-              {t('recognition.letters')}
-            </h4>
-            <div className="space-y-3">
-              <a
-                href="/data/cv/2024_ReferenceLetter_Kristian.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <FileText className="h-4 w-4" />
-                {t('recognition.letterEn')}
-              </a>
-              <a
-                href="/data/cv/2024_ReferenceSchreiben_Kristian.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <FileText className="h-4 w-4" />
-                {t('recognition.letterDe')}
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

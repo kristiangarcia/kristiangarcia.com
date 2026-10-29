@@ -1,52 +1,57 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { ArrowUp, Github, Heart, Linkedin, Mail } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/constants';
 
 export function Footer() {
   const t = useTranslations('footer');
-  const currentYear = new Date().getFullYear();
+  const tu = useTranslations('ui');
+  const year = new Date().getFullYear();
 
-  const socialLinks = [
-    { icon: Github, href: SITE_CONFIG.social.github, label: 'GitHub' },
-    { icon: Linkedin, href: SITE_CONFIG.social.linkedin, label: 'LinkedIn' },
-    { icon: Mail, href: SITE_CONFIG.social.email, label: 'Email' },
+  const socials = [
+    { icon: Github, href: SITE_CONFIG.social.github, label: 'GitHub', external: true },
+    { icon: Linkedin, href: SITE_CONFIG.social.linkedin, label: 'LinkedIn', external: true },
+    { icon: Mail, href: SITE_CONFIG.social.email, label: 'Email', external: false },
   ];
 
   return (
-    <footer className="border-t border-border bg-card/50">
-      <div className="container-custom py-8 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Left side */}
-          <div className="text-sm text-muted-foreground">
-            © {currentYear} {SITE_CONFIG.name}. {t('rights')}.
-          </div>
-
-          {/* Center - Made with */}
-          <div className="text-sm text-muted-foreground flex items-center gap-2">
+    <footer className="relative overflow-hidden border-t border-border">
+      <div className="container-x pt-14">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <p className="text-sm text-muted-foreground">
+            © {year} {SITE_CONFIG.name}. {t('rights')}.
+          </p>
+          <p className="flex items-center gap-2 text-sm text-muted-foreground">
             {t('madeWith')}
-            <Heart className="h-4 w-4 text-primary fill-primary animate-pulse" />
+            <Heart className="h-3.5 w-3.5 fill-accent text-accent" aria-hidden="true" />
             {t('and')} Next.js
-          </div>
-
-          {/* Right side - Social Links */}
-          <div className="flex items-center gap-4">
-            {socialLinks.map((link) => (
+          </p>
+          <div className="flex items-center gap-1">
+            <a href="/privacidad.html" className="link-u mr-3 text-sm text-muted-foreground hover:text-foreground">
+              {t('privacy')}
+            </a>
+            {socials.map((s) => (
               <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label={link.label}
+                key={s.label}
+                href={s.href}
+                {...(s.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="icon-btn"
+                aria-label={s.label}
               >
-                <link.icon className="h-5 w-5" />
+                <s.icon className="h-4 w-4" aria-hidden="true" />
               </a>
             ))}
+            <a href="#home" className="icon-btn ml-2 border-border" aria-label={tu('backToTop')}>
+              <ArrowUp className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>
+      <p
+        aria-hidden="true"
+        className="pointer-events-none mt-10 select-none whitespace-nowrap text-center text-[17vw] font-semibold leading-[0.78] tracking-[-0.07em] text-foreground/[0.06]"
+      >
+        Kristian<span className="font-serif font-normal italic tracking-[-0.04em]">García</span>
+      </p>
     </footer>
   );
 }

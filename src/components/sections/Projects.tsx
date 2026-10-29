@@ -1,134 +1,117 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { Github, CheckCircle2, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
+import { Reveal } from '@/components/motion/Reveal';
+import { Spotlight } from '@/components/motion/Spotlight';
+import { SectionHeading } from '@/components/ui/SectionHeading';
+import { cn } from '@/lib/utils';
 
-const projects: Array<{
-  key:
-    | 'nexus'
-    | 'cognitia'
-    | 'agentCatalog'
-    | 'mailpilot'
-    | 'luminakraft'
-    | 'launcher';
-  githubUrl?: string;
-  websiteUrl?: string;
-}> = [
-  { key: 'nexus' },
+type ProjectKey = 'nexus' | 'cognitia' | 'agentCatalog' | 'mailpilot' | 'luminakraft' | 'launcher';
+
+const projects: Array<{ key: ProjectKey; githubUrl?: string; websiteUrl?: string; wide?: boolean }> = [
+  { key: 'nexus', wide: true },
   { key: 'cognitia' },
   { key: 'agentCatalog' },
   { key: 'mailpilot' },
-  {
-    key: 'luminakraft',
-    websiteUrl: 'https://www.luminakraft.com/',
-  },
-  {
-    key: 'launcher',
-    githubUrl: 'https://github.com/LuminaKraft/LuminaKraftLauncher',
-  },
+  { key: 'luminakraft', websiteUrl: 'https://www.luminakraft.com/' },
+  { key: 'launcher', githubUrl: 'https://github.com/LuminaKraft/LuminaKraftLauncher', wide: true },
 ];
 
 export function Projects() {
   const t = useTranslations('projects');
+  const tn = useTranslations('nav');
 
   return (
-    <section id="projects" className="section">
-      <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('title')}</h2>
-          <p className="text-lg text-muted-foreground">{t('subtitle')}</p>
-        </motion.div>
+    <section id="projects" aria-labelledby="projects-title" className="section bg-card">
+      <div className="container-x">
+        <SectionHeading id="projects-title" index="04" label={tn('projects')} title={t('title')} subtitle={t('subtitle')} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => {
-            const tech = t.raw(`items.${project.key}.tech`) as string[];
-            const highlights = t.raw(
-              `items.${project.key}.highlights`
-            ) as string[];
-
+        <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+          {projects.map((p, i) => {
+            const tech = t.raw(`items.${p.key}.tech`) as string[];
+            const highlights = t.raw(`items.${p.key}.highlights`) as string[];
             return (
-              <motion.div
-                key={project.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card border border-border rounded-lg hover:border-primary transition-colors h-full flex flex-col"
+              <Reveal
+                as="li"
+                key={p.key}
+                delay={(i % 3) * 90}
+                className={cn('flex', p.wide && 'lg:col-span-2', p.key === 'nexus' && 'md:col-span-2')}
               >
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-bold mb-3">
-                    {t(`items.${project.key}.title`)}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {t(`items.${project.key}.description`)}
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {tech.map((item) => (
-                        <span
-                          key={item}
-                          className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium"
+                <Spotlight
+                  className="group flex w-full flex-col rounded-lg border border-border bg-background p-6 transition-[border-color,transform] duration-500 hover:-translate-y-1 hover:border-foreground/50 md:p-8"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <span className="font-mono text-xs text-muted-foreground">
+                      P/{String(i + 1).padStart(2, '0')}
+                    </span>
+                    <div className="flex gap-2">
+                      {p.githubUrl && (
+                        <a
+                          href={p.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-outline btn-sm"
                         >
-                          {item}
-                        </span>
-                      ))}
+                          <Github className="h-3.5 w-3.5" aria-hidden="true" />
+                          {t('viewGithub')}
+                        </a>
+                      )}
+                      {p.websiteUrl && (
+                        <a
+                          href={p.websiteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-outline btn-sm group/l"
+                        >
+                          {t('website')}
+                          <ArrowUpRight
+                            className="h-3.5 w-3.5 transition-transform group-hover/l:-translate-y-0.5 group-hover/l:translate-x-0.5"
+                            aria-hidden="true"
+                          />
+                        </a>
+                      )}
                     </div>
                   </div>
 
-                  {/* Highlights */}
-                  <ul className="space-y-1 mb-6 text-sm">
-                    {highlights.map((highlight, i) => (
-                      <li
-                        key={i}
-                        className="text-muted-foreground flex gap-2 items-start"
-                      >
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        {highlight}
+                  <h3
+                    className={cn(
+                      'mt-10 text-balance font-semibold leading-[1.02] tracking-[-0.04em]',
+                      p.wide ? 'text-3xl md:text-[2.75rem]' : 'text-3xl'
+                    )}
+                  >
+                    {t(`items.${p.key}.title`)}
+                  </h3>
+                  <p
+                    className={cn(
+                      'mt-4 text-pretty leading-relaxed text-muted-foreground',
+                      p.wide && 'max-w-2xl md:text-lg'
+                    )}
+                  >
+                    {t(`items.${p.key}.description`)}
+                  </p>
+
+                  <ul className={cn('mt-6 space-y-2 text-sm', p.wide && 'md:grid md:grid-cols-2 md:gap-x-8 md:space-y-0 md:gap-y-2')}>
+                    {highlights.map((h) => (
+                      <li key={h} className="flex items-baseline gap-2.5">
+                        <span aria-hidden="true" className="h-1 w-1 shrink-0 translate-y-[-2px] rounded-full bg-accent" />
+                        {h}
                       </li>
                     ))}
                   </ul>
 
-                  {/* Actions */}
-                  {(project.githubUrl || project.websiteUrl) && (
-                    <div className="flex gap-2 mt-auto">
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 inline-flex items-center justify-center rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
-                        >
-                          <Github className="h-4 w-4 mr-2" aria-hidden="true" />
-                          {t('viewGithub')}
-                        </a>
-                      )}
-                      {project.websiteUrl && (
-                        <a
-                          href={project.websiteUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 inline-flex items-center justify-center rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
-                        >
-                          <ExternalLink className="h-4 w-4 mr-2" aria-hidden="true" />
-                          {t('website')}
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </motion.div>
+                  <div className="mt-auto pt-8">
+                    <ul className="flex flex-wrap gap-1.5 border-t border-border pt-5" aria-label="Tech stack">
+                      {tech.map((item) => (
+                        <li key={item} className="tag group-hover:border-foreground/30">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Spotlight>
+              </Reveal>
             );
           })}
-        </div>
+        </ul>
       </div>
     </section>
   );

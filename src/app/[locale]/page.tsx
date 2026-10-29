@@ -8,6 +8,7 @@ import { Experience } from '@/components/sections/Experience';
 import { Projects } from '@/components/sections/Projects';
 import { Education } from '@/components/sections/Education';
 import { Contact } from '@/components/sections/Contact';
+import { Marquee } from '@/components/sections/Marquee';
 
 export default async function HomePage({
   params,
@@ -22,8 +23,9 @@ export default async function HomePage({
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main id="main">
         <Hero />
+        <Marquee />
         <About />
         <Skills />
         <Experience />

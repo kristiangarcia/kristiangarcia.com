@@ -1,33 +1,55 @@
 'use client';
 
-import { useParams } from 'next/navigation';
-import { useRouter, usePathname } from '@/i18n/routing';
-import { Button } from './Button';
-import { Languages } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/routing';
+import { cn } from '@/lib/utils';
 
-export function LanguageSwitcher() {
-  const router = useRouter();
+const LOCALES = [
+  { code: 'en', label: 'EN', name: 'English' },
+  { code: 'es', label: 'ES', name: 'Español' },
+] as const;
+
+export function LanguageSwitcher({ className }: { className?: string }) {
+  const locale = useLocale();
   const pathname = usePathname();
-  const params = useParams();
-
-  const currentLocale = params.locale as string;
-
-  const switchLanguage = () => {
-    const newLocale = currentLocale === 'en' ? 'es' : 'en';
-    router.replace(pathname, { locale: newLocale });
-  };
+  const t = useTranslations('ui');
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={switchLanguage}
-      aria-label="Switch language"
+    <div
+      role="group"
+      aria-label={t('switchLanguage')}
+      className={cn(
+        'relative flex h-9 items-center rounded-full border border-border p-0.5 font-mono text-[0.7rem] tracking-[0.08em]',
+        className
+      )}
     >
-      <Languages className="h-5 w-5" />
-      <span className="sr-only">
-        {currentLocale === 'en' ? 'Español' : 'English'}
-      </span>
-    </Button>
+      <span
+        aria-hidden="true"
+        className={cn(
+          'absolute top-0.5 h-[calc(100%-4px)] w-[calc(50%-2px)] rounded-full bg-foreground transition-transform duration-300 ease-out',
+          locale === 'es' ? 'translate-x-full' : 'translate-x-0'
+        )}
+      />
+      {LOCALES.map((l) => {
+        const active = l.code === locale;
+        return (
+          <Link
+            key={l.code}
+            href={pathname}
+            locale={l.code}
+            hrefLang={l.code}
+            lang={l.code}
+            aria-current={active ? 'true' : undefined}
+            aria-label={l.name}
+            className={cn(
+              'relative z-10 flex h-full w-9 items-center justify-center rounded-full transition-colors duration-300',
+              active ? 'text-background' : 'text-muted-foreground hover:text-foreground'
+            )}
+          >
+            {l.label}
+          </Link>
+        );
+      })}
+    </div>
   );
 }
