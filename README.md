@@ -132,3 +132,7 @@ To update content:
 ## License
 
 All rights reserved © Kristian García Paulsen
+
+## Despliegue
+
+Web estática (`next build` con `output: 'export'` → `out/`). La publica el repo `static-sites` en Cloudflare (Workers + assets) al detectar commits nuevos en `main`; no hay servidor propio. La raíz sirve el inglés (idioma por defecto) y `/es` el español.
