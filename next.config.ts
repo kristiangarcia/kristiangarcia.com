@@ -4,9 +4,10 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  output: 'export',
+  trailingSlash: false,
   images: {
-    formats: ['image/webp', 'image/avif'],
+    unoptimized: true,
   },
 };
 
