@@ -26,9 +26,6 @@ export function Footer() {
             {t('and')} Next.js
           </p>
           <div className="flex items-center gap-1">
-            <a href="/privacidad.html" className="link-u mr-3 text-sm text-muted-foreground hover:text-foreground">
-              {t('privacy')}
-            </a>
             {socials.map((s) => (
               <a
                 key={s.label}
