@@ -30,7 +30,7 @@ export function Contact() {
             id="contact-title"
             className="mt-10 text-balance text-[clamp(3rem,10vw,9.5rem)] font-semibold leading-[0.88] tracking-[-0.055em]"
           >
-            {t('title')}
+            {t('title')}{' '}
             <span className="block font-serif font-normal italic tracking-[-0.03em] text-background/60">
               {t('subtitle')}
             </span>

@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: 'Kristian García Paulsen',
   title: 'AI Engineer & Full-Stack Developer',
   description:
-    'AI Engineer and full-stack developer in Granada, Spain. I build LLM agents for real business workflows: multi-agent pipelines, human-in-the-loop email agents, agent governance tooling and a production AI assistant for Unit4 ERP.',
+    'AI Engineer & full-stack developer in Granada, Spain. I build LLM agents for real business workflows: multi-agent pipelines, human-in-the-loop, production AI.',
   url: 'https://kristiangarcia.com',
   email: 'info@kristiangarcia.com',
   location: 'Granada, Spain',

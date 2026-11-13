@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Kristian García Paulsen | AI Engineer & Full-Stack Developer",
-    "description": "AI Engineer and full-stack developer in Granada, Spain. I build LLM agents for real business workflows: multi-agent pipelines, human-in-the-loop email agents, agent governance tooling and a production AI assistant for Unit4 ERP."
+    "description": "AI Engineer & full-stack developer in Granada, Spain. I build LLM agents for real business workflows: multi-agent pipelines, human-in-the-loop, production AI."
   },
   "nav": {
     "home": "Home",
@@ -365,7 +365,7 @@
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Let's work together",
-    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+    "description": "Tell me about the process you want to automate with AI agents, the product you want to build or the role you have in mind: email me or use the form.",
     "form": {
       "name": "Name",
       "email": "Email",

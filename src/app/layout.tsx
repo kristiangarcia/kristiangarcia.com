@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { SITE_CONFIG } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: `${SITE_CONFIG.name} | ${SITE_CONFIG.title}`,
     description: SITE_CONFIG.description,
   },
@@ -45,6 +45,15 @@ export const metadata: Metadata = {
     // Meta (WhatsApp Business) domain verification for the KOGP business portfolio.
     'facebook-domain-verification': 'wmigo0jk5d2rk7s96mcdc36814y7rb',
   },
+};
+
+// Color de la barra del navegador según el tema del sistema (mismos valores que --background en globals.css).
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f4f3f0' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0b' },
+  ],
+  colorScheme: 'dark light',
 };
 
 export default function RootLayout({

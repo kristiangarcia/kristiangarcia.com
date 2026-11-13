@@ -120,6 +120,13 @@ The Dockerfile includes:
 
 - Hero portrait: `public/imgs/portrait/kristian-{480,678}.{avif,webp}` (4:5 crop of the B&W studio portrait), served with `<picture>` + `srcset`.
 - Social preview: `public/imgs/og.jpg` (1200x630).
+- Icons: `src/app/icon.svg` (source), `src/app/favicon.ico`, `src/app/apple-icon.png` (180x180) and `public/icons/icon-{192,512}.png` (manifest), generated from the SVG with `sharp`.
+
+### SEO files
+
+- `src/app/sitemap.ts`, `src/app/robots.ts` and `src/app/manifest.ts` generate `/sitemap.xml`, `/robots.txt` and `/manifest.webmanifest` at build time (`force-static`).
+- JSON-LD (`Person` + `WebSite` + `ProfilePage`) is rendered per locale in `src/components/layout/SiteShell.tsx`; keep it in sync with the published content.
+- Only the `ui`, `nav` and `hero.cta` messages are sent to client components (see `clientMessages` in `SiteShell.tsx`); if a `'use client'` component starts using another namespace, add it there.
 - Achievement images live in `public/imgs/achievements/`.
 
 ### Content Updates

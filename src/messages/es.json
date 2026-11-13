@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Kristian García Paulsen | Ingeniero de IA y desarrollador full-stack",
-    "description": "Ingeniero de IA y desarrollador full-stack en Granada. Desarrollo agentes LLM para procesos de negocio reales: pipelines multiagente, agentes de correo con validación humana, herramientas de gobernanza de agentes y un asistente de IA en producción para Unit4 ERP."
+    "description": "Ingeniero de IA y desarrollador full-stack en Granada. Creo agentes LLM para procesos de negocio reales: pipelines multiagente, validación humana, IA en producción."
   },
   "nav": {
     "home": "Inicio",
@@ -365,7 +365,7 @@
   "contact": {
     "title": "Contacta conmigo",
     "subtitle": "Trabajemos juntos",
-    "description": "Siempre estoy abierto a hablar de nuevos proyectos, ideas u oportunidades en las que pueda aportar.",
+    "description": "Cuéntame qué proceso quieres automatizar con agentes de IA, qué producto quieres construir o qué puesto tienes en mente: escríbeme por correo o usa el formulario.",
     "form": {
       "name": "Nombre",
       "email": "Email",
